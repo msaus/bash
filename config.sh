@@ -5,13 +5,13 @@ database=measure
 # max process
 max_proc=1
 
-# o—Íƒf[ƒ^ƒtƒ@ƒCƒ‹Ý’è
+# å‡ºåŠ›ãƒ‡ãƒ¼ã‚¿ãƒ•ã‚¡ã‚¤ãƒ«è¨­å®š
 outfile=${base_dir}/keyword_tmp/OUTFILE.txt
 
-# “Çžƒf[ƒ^Ý’è
+# èª­è¾¼ãƒ‡ãƒ¼ã‚¿è¨­å®š
 file_dir=${base_dir}/keyword_tmp
 
-# ƒƒOÝ’è
+# ãƒ­ã‚°è¨­å®š
 log_dir=/var/vhosts/yahoo/fuel/app/logs/`date +%Y`/`date +%m`/`date +%d`.php
 mkdir /var/vhosts/yahoo/fuel/app/logs/`date +%Y`/`date +%m`/  2>/dev/null
 touch /var/vhosts/yahoo/fuel/app/logs/`date +%Y`/`date +%m`/`date +%d`.php  2>/dev/null

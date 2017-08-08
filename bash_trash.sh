@@ -7,37 +7,37 @@ trap "KILL; exit 1" 9
 trap "STOP; exit 1" 19
 
 function HUP {
-  echo "§Œä‚µ‚Ä‚¢‚é’[––^ƒvƒƒZƒX‚ªƒnƒ“ƒOƒAƒbƒv‚µ‚Ü‚µ‚½" >> "$log_dir"
+  echo "åˆ¶å¾¡ã—ã¦ã„ã‚‹ç«¯æœ«ï¼ãƒ—ãƒ­ã‚»ã‚¹ãŒãƒãƒ³ã‚°ã‚¢ãƒƒãƒ—ã—ã¾ã—ãŸ" >> "$log_dir"
   exit 1
 }
 
 function INT {
-  echo "ƒL[ƒ{[ƒh‚©‚ç‚ÌŠ„‚èž‚Ý–½—ßimCtrln{mCnƒL[j‚ª‚¾‚³‚ê‚Ü‚µ‚½" >> "$log_dir"
+  echo "ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ã‹ã‚‰ã®å‰²ã‚Šè¾¼ã¿å‘½ä»¤ï¼ˆï¼»Ctrlï¼½ï¼‹ï¼»Cï¼½ã‚­ãƒ¼ï¼‰ãŒã ã•ã‚Œã¾ã—ãŸ" >> "$log_dir"
   exit 1
 }
 
 function QUIT {
-  echo "  ƒL[ƒ{[ƒh‚©‚ç‚Ì’†Ž~–½—ßimCtrln{m\nƒL[j‚ª‚¾‚³‚ê‚Ü‚µ‚½" >> "$log_dir"
+  echo "  ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ã‹ã‚‰ã®ä¸­æ­¢å‘½ä»¤ï¼ˆï¼»Ctrlï¼½ï¼‹ï¼»\ï¼½ã‚­ãƒ¼ï¼‰ãŒã ã•ã‚Œã¾ã—ãŸ" >> "$log_dir"
   exit 1
 }
 
 function TERM {
-  echo "ƒvƒƒZƒX‚ÌI—¹–½—ßiƒfƒtƒHƒ‹ƒgj‚ªo‚³‚ê‚Ü‚µ‚½" >> "$log_dir"
+  echo "ãƒ—ãƒ­ã‚»ã‚¹ã®çµ‚äº†å‘½ä»¤ï¼ˆãƒ‡ãƒ•ã‚©ãƒ«ãƒˆï¼‰ãŒå‡ºã•ã‚Œã¾ã—ãŸ" >> "$log_dir"
   exit 1
 }
 
 function KILL {
-  echo "ƒvƒƒZƒX‚ªKILL‚³‚ê‚Ü‚µ‚½" >> "$log_dir"
+  echo "ãƒ—ãƒ­ã‚»ã‚¹ãŒKILLã•ã‚Œã¾ã—ãŸ" >> "$log_dir"
   exit 1
 }
 
 function STOP {
-  echo "ƒvƒƒZƒX‚Ì’âŽ~–½—ßimCtrln{mZnƒL[j‚ªo‚³‚ê‚Ü‚µ‚½" >> "$log_dir"
+  echo "ãƒ—ãƒ­ã‚»ã‚¹ã®åœæ­¢å‘½ä»¤ï¼ˆï¼»Ctrlï¼½ï¼‹ï¼»Zï¼½ã‚­ãƒ¼ï¼‰ãŒå‡ºã•ã‚Œã¾ã—ãŸ" >> "$log_dir"
   exit 1
 }                                                                                                                                                             
                                                                                                                                                               
 on_exit(){                                                                                                                                                    
-  # ³íI—¹Žž‚Í‰½‚àƒƒO‚Éo—Í‚µ‚È‚¢                                                                                                                          
+  # æ­£å¸¸çµ‚äº†æ™‚ã¯ä½•ã‚‚ãƒ­ã‚°ã«å‡ºåŠ›ã—ãªã„                                                                                                                          
   if [ $? -ne 0 ]; then                                                                                                                                       
     echo "Kill child processes on exit by 'pkill -P $$'" >> "$log_dir"                                                                                        
     pkill -P $$                                                                                                                                               

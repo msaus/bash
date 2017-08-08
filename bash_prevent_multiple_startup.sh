@@ -1,8 +1,8 @@
 #!/bin/sh                                                                                                                                                     
 
-# ‘½d‹N“®–hŽ~
+# å¤šé‡èµ·å‹•é˜²æ­¢
 _CMD="$0 $@"
 if [ "$$" -ne $(pgrep -fo "$_CMD") ]; then
-  echo "INFO - "`date +%Y-%m-%d` `date +%H:%M:%S` "Šù‚É‹N“®‚µ‚Ä‚¢‚Ü‚·" >> "$log_dir"
+  echo "INFO - "`date +%Y-%m-%d` `date +%H:%M:%S` "æ—¢ã«èµ·å‹•ã—ã¦ã„ã¾ã™" >> "$log_dir"
   exit 1
 fi
